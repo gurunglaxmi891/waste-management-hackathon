@@ -8,6 +8,8 @@ var profileRouter = require('./routes/profile')
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var adminRouter = require('./routes/admin');
+var cityRouter = require('./routes/city');
+var userWardRouter = require('./routes/user_ward');
 
 var app = express();
 
@@ -24,6 +26,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/admin', adminRouter);
+app.use('/city', cityRouter);
+app.use('/user_ward', userWardRouter);
 
 app.use('/profile', profileRouter)
 // catch 404 and forward to error handler
