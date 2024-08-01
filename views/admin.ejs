@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WP Notifier - Admin Dashboard</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .sidebar {
+      height: 100vh;
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 250px;
+      background-color: #1f618d;
+      color: white;
+      padding-top: 20px;
+    }
+
+    .sidebar h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .sidebar a {
+      color: white;
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+    }
+
+    .sidebar a:hover {
+      background-color: #4696cb;
+    }
+
+    .content {
+      margin-left: 250px;
+      padding: 20px;
+    }
+
+    .card {
+      margin: 15px 0;
+      border: none;
+      border-radius: 8px;
+    }
+
+    .card-body {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+    }
+
+    .card-title {
+      font-size: 1.5rem;
+    }
+
+    .more-info {
+      font-size: 0.9rem;
+    }
+
+    .bg-info {
+      background-color: #3498db !important;
+    }
+
+    .bg-warning {
+      background-color: #f39c12 !important;
+    }
+
+    .bg-danger {
+      background-color: #e74c3c !important;
+    }
+
+    .bg-success {
+      background-color: #27ae60 !important;
+    }
+
+    .bg-primary {
+      background-color: #2980b9 !important;
+    }
+
+    .bg-pink {
+      background-color: #e91e63 !important;
+    }
+
+    .bg-teal {
+      background-color: #1abc9c !important;
+    }
+
+    .text-white {
+      color: white !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>WP Notifier</h2>
+    <a href="/admin/dashboard">Dashboard</a>
+    <a href="/admin/users">User Management</a>
+    <a href="/admin/cities">City Management</a>
+    <a href="/admin/wards">Ward Management</a>
+    <a href="/admin/schedule">Schedule</a>
+    <a action="/profile" href="/admin/profile">Admin Profile</a>
+  </div>
+  <div class="content">
+    <h1>Dashboard <small class="text-muted">Control panel</small></h1>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="card bg-info">
+          <div class="card-body">
+            <div>
+              <h5 class="card-title">4</h5>
+              <p class="card-text">Total User</p>
+            </div>
+            <div class="more-info">
+              <a href="#" class="text-white">More info</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card bg-warning">
+          <div class="card-body">
+            <div>
+              <h5 class="card-title">15</h5>
+              <p class="card-text">Total City</p>
+            </div>Slider
+            <div class="more-info">
+              <a href="#" class="text-white">More info</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card bg-danger">
+          <div class="card-body">
+            <div>
+              <h5 class="card-title">70</h5>
+              <p class="card-text">Total Ward</p>
+            </div>
+            <div class="more-info">
+              <a href="#" class="text-white">More info</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card bg-success">
+          <div class="card-body">
+            <div>
+              <h5 class="card-title">20</h5>
+              <p class="card-text">Total Admin</p>
+            </div>
+            <div class="more-info">
+              <a href="#" class="text-white">More info</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+            
+</body>
+</html>
