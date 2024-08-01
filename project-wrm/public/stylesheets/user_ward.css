@@ -93,9 +93,6 @@ select::-ms-expand {
   font-size: 20px;
   margin-top: 20px;
 }
-a{
-  list-style: none;
-}
 
 .next-button:hover {
   background-color: #218838; /* Darker green on hover */
