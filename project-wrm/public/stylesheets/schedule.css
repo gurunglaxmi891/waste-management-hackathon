@@ -1,87 +1,28 @@
+CSS
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+    text-align: center;
 }
 
 .container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+table {
     width: 100%;
-    margin: 20px;
+    border-collapse: collapse;
 }
 
-h2 {
-    text-align: center;
-    color: #333;
+th, td {
+    border: 1px solid black;
+    padding: 8px;
 }
 
-.get-tickets {
-    display: block;
-    margin: 10px auto;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+th {
+    background-color: #f2f2f2;
 }
 
-.filter {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.filter label {
-    font-size: 16px;
-    color: #555;
-}
-
-.filter select {
-    padding: 5px;
-    font-size: 16px;
-    margin-left: 10px;
-}
-
-.schedule {
+.footer {
     margin-top: 20px;
-}
-
-.date {
-    font-size: 18px;
-    font-weight: bold;
-    color: #555;
-}
-
-.schedule-item {
-    padding: 10px 0;
-}
-
-.schedule-item .time {
-    font-size: 16px;
-    color: #777;
-}
-
-.schedule-item .event {
-    font-size: 18px;
-    color: #333;
-    margin: 5px 0;
-}
-
-.schedule-item .location {
-    font-size: 14px;
-    color: #777;
-}
-
-hr {
-    border: none;
-    border-top: 1px solid #ddd;
-    margin: 10px 0;
 }
