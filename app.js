@@ -27,8 +27,6 @@ app.use('/users', usersRouter);
 app.use('/admin', adminRouter);
 app.use('/city', cityRouter);
 app.use('/user_ward', userWardRouter);
-app.use('/admin/profile', profileRouter);
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
