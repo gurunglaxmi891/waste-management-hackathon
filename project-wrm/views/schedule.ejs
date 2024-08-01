@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Waste Management Schedule</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/schedule.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h2>Schedule</h2>
+        <button class="get-tickets">Get Tickets</button>
+        <div class="filter">
+            <label for="filter">Filter By:</label>
+            <select id="filter">
+                <option value="all">All Places</option>
+                <option value="main-stage">Main Stage</option>
+                <option value="sinclair-room">Sinclair Room</option>
+                <!-- Add more options as needed -->
+            </select>
+        </div>
+        <div class="schedule">
+            <p class="date">Sat., May 01</p>
+            <hr>
+            <% schedule.forEach(function(item) { %>
+                <div class="schedule-item">
+                    <p class="time"><%= item.time %></p>
+                    <h3 class="event"><%= item.event %></h3>
+                    <p class="location"><%= item.location %></p>
+                </div>
+                <hr>
+            <% }) %>
+        </div>
+    </div>
+</body>
+</html>
