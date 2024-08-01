@@ -1,10 +1,7 @@
 var express = require('express');
 var router = express.Router();
-
-/* GET admin profile. */
-router.get('/profile', function(req, res, next) {
+router.get("/profile",(req,res) =>{
   res.render("profile");
 });
-
 
 module.exports = router;

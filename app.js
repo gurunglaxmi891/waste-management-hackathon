@@ -3,7 +3,6 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var profileRouter = require('./routes/profile')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -28,8 +27,9 @@ app.use('/users', usersRouter);
 app.use('/admin', adminRouter);
 app.use('/city', cityRouter);
 app.use('/user_ward', userWardRouter);
+app.use('/admin/profile', profileRouter);
 
-app.use('/profile', profileRouter)
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

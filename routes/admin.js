@@ -6,5 +6,13 @@ var router = express.Router();
 router.get("/schedule",(req,res) =>{
     res.render("schedule");
   });
+  router.get("/dashboard",(req,res) =>{
+    res.render("dashboard");
+  });
+  
+
+router.get("/profile",(req,res) =>{
+  res.render("profile");
+  });
 
 module.exports = router;
