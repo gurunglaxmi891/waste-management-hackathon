@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .admin-section {
+            background-color: #f4f4f4;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Admin Panel</h1>
+
+    <div class="admin-section">
+        <h2>User Management</h2>
+        <ul>
+            <li><a href="/admin/users">View All Users</a></li>
+            <li><a href="/admin/users/create">Create New User</a></li>
+        </ul>
+    </div>
+
+    <div class="admin-section">
+        <h2>Content Management</h2>
+        <ul>
+            <li><a href="/admin/posts">Manage Posts</a></li>
+            <li><a href="/admin/pages">Manage Pages</a></li>
+        </ul>
+    </div>
+
+    <div class="admin-section">
+        <h2>Settings</h2>
+        <ul>
+            <li><a href="/admin/settings/general">General Settings</a></li>
+            <li><a href="/admin/settings/security">Security Settings</a></li>
+        </ul>
+    </div>
+
+    <% if (locals.adminName) { %>
+        <p>Logged in as: <%= adminName %></p>
+    <% } %>
+</body>
+</html>
