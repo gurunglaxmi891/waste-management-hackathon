@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var profile = require('../resources/profile');
 
 // add a new route for schedule page
 
@@ -12,7 +13,8 @@ router.get("/schedule",(req,res) =>{
   
 
 router.get("/profile",(req,res) =>{
-  res.render("profile");
+  res.render("profile",{admin: profile});
+
   });
 
 module.exports = router;
