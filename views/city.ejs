@@ -7,7 +7,7 @@
 <body>
   <nav>
     <h1>WP Notifier</h1>
-    <button class="login-button">Login</button>
+    <button class="login-button" onclick="redirectLogin()">Login</a></button>
   </nav>
   <div class="container">
     <label for="city">Select your city</label>
@@ -16,8 +16,17 @@
       <option value="Lalitpur">Ward 2</option>
       <option value="Kathmandu">Ward 3</option>
     </select>
-    <button class="next-button"><a href="/user_ward/user_ward">Next</a></button>
+    <button class="next-button"  onclick="redirectWard()">Next</a></button>
   </div>
 
+  <script>
+    function redirectLogin(){
+      window.location.href = '/users/login';
+    }
+    function redirectWard(){
+      window.location.href = '/user_ward/user_ward';
+    }
+    
+  </script>
 </body>
 </html>
