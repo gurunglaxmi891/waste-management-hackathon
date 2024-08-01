@@ -98,3 +98,7 @@ select::-ms-expand {
   background-color: #218838; /* Darker green on hover */
 }
 
+a{
+  text-decoration: none;
+  color:#fff;
+}
