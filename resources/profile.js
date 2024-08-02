@@ -1,11 +1,11 @@
 let profile=[
     {
         "name": "Ram Bahadur Gurung",
-        "email": "susrdjfn@gmail.com"
+        "password": "asdfghjkl"
     },
     {
         "name" : "Swostika Poudel",
-        "email" :"kjdkejd@gmail.com",
+        "password" :"",
     }
 ]
 
