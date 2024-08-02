@@ -12,6 +12,7 @@ var userWardRouter = require('./routes/user_ward');
 var userScheduleRouter = require('./routes/user_schedule');
 var userNotificationRouter = require('./routes/user_notification');
 var homeRouter = require('./routes/home');
+var dashboardRouter = require('./routes/admin');
 
 var app = express();
 
@@ -28,8 +29,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/admin', adminRouter);
+app.use('/dashboard', dashboardRouter);
 
 app.use('/city', cityRouter);
+
 app.use('/user_ward', userWardRouter);
 app.use('/user_schedule', userScheduleRouter);
 app.use('/home', homeRouter);
