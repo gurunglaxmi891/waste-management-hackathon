@@ -4,39 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Profile</title>
-    <link rel="stylesheet" href="/styles.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="/stylesheets/adminprofile.css">
 </head>
 <body>
-    <header>
-        <h1>Admin Profile</h1>
-        <nav>
-            <ul>
-                <li><a href="/dashboard">Dashboard</a></li>
-                <li><a href="/users">Users</a></li>
-                <li><a href="/settings">Settings</a></li>
-                <li><a href="/logout">Logout</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section class="profile-info">
-            <h2>Profile Information</h2>
-            <div class="profile-details">
-                <p><strong>Name:</strong> <%= admin.name %></p>
-                <p><strong>Email:</strong> <%= admin.email %></p>
+    <div class="container">
+        <div class="profile-header">
+            <div class="profile-picture">
+                
             </div>
-        </section>
-
-        <section class="profile-actions">
-            <h2>Actions</h2>
-            <a href="/admin/edit-profile" class="button">Edit Profile</a>
-            <a href="/admin/change-password" class="button">Change Password</a>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Your Company</p>
-    </footer>
+            <div class="profile-details">
+                <h1>Admin Name</h1>
+                <p>Administrator</p>
+            </div>
+        </div>
+        <div class="profile-info">
+            <h2>Profile Information</h2>
+            <ul>
+                <li><span>Email:</span> admin@example.com</li>
+                <li><span>Phone:</span> +1 (555) 123-4567</li>
+                <li><span>Joined:</span> January 1, 2020</li>
+                <li><span>Role:</span> Super Admin</li>
+            </ul>
+        </div>
+        <div class="profile-actions">
+            <button>Edit Profile</button>
+            <button>Log Out</button>
+        </div>
+    </div>
 </body>
 </html>
