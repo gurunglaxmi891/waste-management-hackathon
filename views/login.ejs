@@ -19,10 +19,16 @@
                 <input type="password" id="password" name="password" placeholder="Enter your password" required>
             </div>
             <div class="form-group">
-                <button type="submit" class="submit-btn">Login</button>
+                <button type="submit" class="submit-btn" onclick="redirectDashboard()">Login</button>
             </div>
         </form>
         <p>Don't have an account? <a href ="/users/signup">Signup</a></p>
     </div>
+    <script>
+         
+    function redirectDashboard(){
+      window.location.href = '/admin/dashboard';
+    }
+    </script>
 </body>
 </html>
