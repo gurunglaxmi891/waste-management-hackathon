@@ -38,6 +38,10 @@
             text-decoration: none;
             font-weight: bold;
         }
+        .header nav a.active {
+            /* text-decoration: underline; */
+            color:#669833;
+        }
       
         .login-button {
   background-color: #8cbbed; /* Blue color */
@@ -115,9 +119,9 @@
     <div class="header">
         <div class="logo">WP Notifier</div>
         <nav>
-            <a href="/user_schedule/user_schedule">Schedule</a>
+            <a href="/user_schedule/user_schedule" class="active">Schedule</a>
             <a href="/user_notification/user_notification">Notifications</a>
-            <a href="#" class="login-button">Login</a>
+            <a href="/users/login" class="login-button">Login</a>
         </nav>
     </div>
 

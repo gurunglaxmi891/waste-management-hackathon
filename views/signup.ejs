@@ -11,7 +11,7 @@
         <h2>SignUp</h2>
         <form action="/signup" method="post">
             <div class="form-group">
-                <label for="name">Name:</label>
+                <label for="name">Username:</label>
                 <input type="text" id="name" name="username" placeholder="Enter your name" required autocomplete="off">
             </div>
             <div class="form-group">
@@ -19,9 +19,14 @@
                 <input type="password" id="password" name="password" placeholder="Enter your password" required>
             </div>
             <div class="form-group">
-                <button type="submit" class="submit-btn">SignUp</button>
+                <button type="submit" class="submit-btn" onclick="redirectLogin()">SignUp</button>
             </div>
         </form>
     </div>
+    <script>
+        function redirectLogin(){
+            window.location.href = '/users/login';
+        }
+    </script>
 </body>
 </html>

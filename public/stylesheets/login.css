@@ -10,6 +10,7 @@ body{
   display:flex;
   align-items:center;
   justify-content:center;
+  background: linear-gradient(135deg, #c5d1e0cc, #2558a0db);
 }
 h2{
   text-align: center;
@@ -21,6 +22,8 @@ h2{
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+  background-color: #fff;
 }
 .form-group{
   margin-bottom: 15px;
@@ -41,7 +44,9 @@ form-group label {
 display: block;
 width: 100%;
 padding: 10px;
-background-color:#472dbb;
+font-size: 16px;
+/* background-color:#472dbb; */
+background-color: #1F618D;
 border: none;
 border-radius: 5px;
 cursor: pointer;
@@ -55,4 +60,40 @@ color:#fff;
 p{
   margin-top:15px;
 }
-
+input{
+  border: none;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 4px 0;
+  box-sizing: border-box;
+  border-radius: 6px; 
+}
+input[type=text]{
+  border: 2px solid #d6dede7a;
+  outline: none;
+  font-size: 16px;
+  color:rgba(137, 130, 130, 0.689);
+}
+input[type=password]{
+  border: 2px solid #d6dede7a;
+  outline: none;
+  font-size: 16px;
+}
+input:focus {
+  border: 2px solid #d6dede;
+  outline: none !important;
+}
+a{
+  text-decoration: none;
+}
+.submit-btn a{
+  color: #fff;
+}
+p{
+  font-size: 14px;
+}
+p a{
+  color: #28a745;
+  font-weight: 600;
+  font-size: 18px;
+}
