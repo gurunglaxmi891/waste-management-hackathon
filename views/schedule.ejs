@@ -1,67 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Event Schedule</title>
-    <link rel="stylesheet" href="stylesheets/schedule.css">
+    <title>Admin Schedule Management</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/schedule.css"> <!-- Link to your CSS file -->
 </head>
 <body>
     <div class="container">
-        <h1>EVENT SCHEDULE</h1>
+        <h2>Schedule</h2>
         <table>
             <thead>
                 <tr>
-                    <th>DAY</th>
-                    <th>MONTH</th>
-                    <th>WARD</th>
-                    <th>TIME</th>
+                    <th>Time</th>
+                    <th>Event</th>
+                    <th>Location</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>SUN</td>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>7:00 AM - 8:00 AM</td>
-                </tr>
-                <tr>
-                    <td>MON</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>TUE</td>
-                    <td>5,6,7,8</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>WED</td>
-                    <td>9,10,11,12</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>THU</td>
-                    <td></td>
-                    <td>1,2,3,4</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>FRI</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>SAT</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+                <% schedules.forEach(function(schedule) { %>
+                    <tr>
+                        <td><%= schedule.time %></td>
+                        <td><%= schedule.event %></td>
+                        <td><%= schedule.location %></td>
+                        <td>
+                            <button onclick="editSchedule('<%= schedule.id %>')">Edit</button>
+                            <button onclick="deleteSchedule('<%= schedule.id %>')">Delete</button>
+                        </td>
+                    </tr>
+                <% }); %>
             </tbody>
         </table>
-        <p class="footer">reallygriratsita.com | 123 anywhere St, Any city</p>
+        <h3>Add New Schedule</h3>
+        <form action="/admin/schedule/add" method="post">
+            <input type="text" name="time" placeholder="Time" required>
+            <input type="text" name="event" placeholder="Event" required>
+            <input type="text" name="location" placeholder="Location" required>
+            <div class="btn">
+                <button type="submit">Add Schedule</button>
+                <button type="submit">Send to Users</button>
+            </div>
+        
+        </form>
     </div>
+
+    <script>
+        function editSchedule(id) {
+            // Redirect to edit page with the schedule id
+            window.location.href = '/admin/schedule/edit/' + id;
+        }
+
+        function deleteSchedule(id) {
+            if (confirm('Are you sure you want to delete this schedule?')) {
+                fetch('/admin/schedule/delete/' + id, { method: 'DELETE' })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            window.location.reload();
+                        } else {
+                            alert('Error deleting schedule');
+                        }
+                    });
+            }
+        }
+    </script>
 </body>
 </html>
