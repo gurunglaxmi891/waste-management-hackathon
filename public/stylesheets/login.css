@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Permanent+Marker&family=Roboto:wght@300;400;500;700&family=Yeseva+One&display=swap');
 *{
   margin : 0;
   padding:0;
   box-sizing:border-box;
 }
 body{
+  font-family: "Roboto", sans-serif;
   height:100vh;
   display:flex;
   align-items:center;
