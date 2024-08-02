@@ -18,7 +18,7 @@ body {
 
 nav {
   background-color: #1F618D; /* Light cream background */
-  padding: 10px;
+  padding: 20px 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,17 +34,18 @@ nav h1 {
 }
 
 .login-button {
-  background-color: #007bff; /* Blue color */
+  background-color:  #8cbbed;; /* Blue color */
   color: white;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
   font-size: 18px;
+  box-shadow: 3px 3px 10px  rgb(69, 68, 68);
 }
 
 .login-button:hover {
-  background-color: #8cbbed; /* Darker blue on hover */
+  background-color: #007bff ; /* Darker blue on hover */
 }
 
 .container {
@@ -83,6 +84,22 @@ select::-ms-expand {
   display: none; /* Remove default arrow in IE */
 }
 
+select{
+  /* border: 5px solid black; */
+  width: 30%;
+  box-shadow: 0 0 5px rgb(75, 74, 74);
+  outline: none;
+  text-indent: 10px;
+  margin: 30px 0;
+}
+
+option{
+  text-indent: 10px;
+  padding: 34px 0;
+
+}
+
+
 .next-button {
   background-color: #28a745; /* Green color */
   color: white;
@@ -92,6 +109,7 @@ select::-ms-expand {
   cursor: pointer;
   font-size: 20px;
   margin-top: 20px;
+  box-shadow: 2px 2px 4px  rgb(69, 68, 68);
 }
 
 .next-button:hover {
