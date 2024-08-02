@@ -2,11 +2,12 @@ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var adminRouter = require('./routes/admin');
+var adminRoutes = require('./routes/admin');
 var cityRouter = require('./routes/city');
 var userWardRouter = require('./routes/user_ward');
 var userScheduleRouter = require('./routes/user_schedule');
@@ -15,14 +16,14 @@ var homeRouter = require('./routes/home');
 var dashboardRouter = require('./routes/admin');
 
 var app = express();
-
+app.use(bodyParser.urlencoded({ extended: true }));
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 

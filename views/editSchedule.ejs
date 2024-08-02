@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Schedule</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/schedule.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h2>Edit Schedule</h2>
+        <form action="/admin/schedule/edit/<%= schedule.id %>" method="post">
+            <input type="text" name="time" value="<%= schedule.time %>" required>
+            <input type="text" name="event" value="<%= schedule.event %>" required>
+            <input type="text" name="location" value="<%= schedule.location %>" required>
+            <button type="submit">Update Schedule</button>
+        </form>
+    </div>
+</body>
+</html>
